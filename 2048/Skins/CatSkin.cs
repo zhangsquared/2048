@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2048
+namespace _2048.Skins
 {
-	public class CatSkin : ISkin
+	internal class CatSkin : ISkin
 	{
-		public override string DisplayString(int x)
+		internal override string DisplayString(int x)
 		{
 			if (x <= 0) { return ""; }
 			if (x <= 2) { return apps[0]; }
@@ -27,6 +27,6 @@ namespace _2048
 		}
 
 		private readonly string[] apps = { "猫毛", "猫头", "猫脖", "猫脊椎", "猫爪",
-			"猫腿", "猫大腿","猫肚", "猫胸", "两个猫胸", "猫洞","小猫菊花","小猫牙"};
+			"猫腿", "猫大腿","猫肚", "猫牙", "猫耳", "猫尾巴","猫屁屁","拍拍"};
 	}
 }

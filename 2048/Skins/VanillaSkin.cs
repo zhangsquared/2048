@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2048
+namespace _2048.Skins
 {
-	public sealed class VanillaSkin : ISkin
+	internal sealed class VanillaSkin : ISkin
 	{
-		public override string DisplayString(int x)
+		internal override string DisplayString(int x)
 		{
 			return x.ToString();
 		}

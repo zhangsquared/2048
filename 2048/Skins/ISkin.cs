@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2048
+namespace _2048.Skins
 {
 	public abstract class ISkin
 	{
@@ -32,7 +32,10 @@ namespace _2048
 	public enum SkinType
 	{
 		Vanilla,
-		MIACApp
+		MIACApp,
+		Cashflow,
+		Cat,
+		Bunny
 	}
 
 	public static class SkinFactory
@@ -45,6 +48,12 @@ namespace _2048
 					return new VanillaSkin();
 				case SkinType.MIACApp:
 					return new MIACAppSkin();
+				case SkinType.Bunny:
+					return new BunnySkin();
+				case SkinType.Cat:
+					return new CatSkin();
+				case SkinType.Cashflow:
+					return new CashFlowSkin();
 				default:
 					throw new InvalidOperationException("Cannot find this type of skin");
 			}

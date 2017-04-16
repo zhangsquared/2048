@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using _2048.Skins;
 using Game2048;
 using Solver2048;
 
@@ -28,15 +29,18 @@ namespace _2048
 			view.OneStep += View_OneStep;
 
 			InitGame();
-			InitSolver();
-
-			view.InitTiles(game.CurrentNumbers, InitSkin);
 			RenderView();
 		}
 
-
-		private ISkin InitSkin => SkinFactory.Generate(SkinType.Vanilla);
+		// dependency injection here
 		private void InitGame()
+		{
+			InitBoard();
+			InitSolver();
+			view.InitTiles(game.CurrentNumbers, InitSkin);
+		}
+		private ISkin InitSkin => SkinFactory.Generate(SkinType.Vanilla);
+		private void InitBoard()
 		{
 			Board board = new Board(WIDTH);
 			ITileGenerator generator = new RandomTileGenerator();

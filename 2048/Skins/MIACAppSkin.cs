@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2048
+namespace _2048.Skins
 {
-	public class MIACAppSkin : ISkin
+	internal class MIACAppSkin : ISkin
 	{
-		public override string DisplayString(int x)
+		internal override string DisplayString(int x)
 		{
 			if (x <= 0) { return ""; }
 			if (x <= 2) { return apps[0]; }

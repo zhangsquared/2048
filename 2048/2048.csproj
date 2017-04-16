@@ -48,13 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BunnySkin.cs" />
-    <Compile Include="CashFlowSkin.cs" />
-    <Compile Include="CatSkin.cs" />
+    <Compile Include="Skins\BunnySkin.cs" />
+    <Compile Include="Skins\CashFlowSkin.cs" />
+    <Compile Include="Skins\CatSkin.cs" />
     <Compile Include="IMainForm.cs" />
-    <Compile Include="AbsSkin.cs" />
+    <Compile Include="Skins\ISkin.cs" />
     <Compile Include="MainPresenter.cs" />
-    <Compile Include="MIACAppSkin.cs" />
+    <Compile Include="Skins\MIACAppSkin.cs" />
     <Compile Include="PrettyForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,7 +69,7 @@
     <Compile Include="TileUserControl.Designer.cs">
       <DependentUpon>TileUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="VanillaSkin.cs" />
+    <Compile Include="Skins\VanillaSkin.cs" />
     <EmbeddedResource Include="PrettyForm.resx">
       <DependentUpon>PrettyForm.cs</DependentUpon>
     </EmbeddedResource>

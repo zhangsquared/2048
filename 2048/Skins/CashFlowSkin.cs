@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2048
+namespace _2048.Skins
 {
 	//The goal is to get PRICE!!
 
@@ -19,9 +19,9 @@ namespace _2048
 
 	//For Advance Mode: We can add Corp Advan, Escrow Model, Eco Model, and Loss Model into this game.
 
-	public class CashFlowSkin : ISkin
+	internal class CashFlowSkin : ISkin
 	{
-		public override string DisplayString(int x)
+		internal override string DisplayString(int x)
 		{
 			if (x <= 0) { return ""; }
 			if (x <= 2) { return elements[0]; }

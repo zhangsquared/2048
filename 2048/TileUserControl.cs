@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+using _2048.Skins;
 
 namespace _2048
 {

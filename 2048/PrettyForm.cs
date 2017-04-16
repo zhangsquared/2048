@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using _2048.Skins;
 using Game2048;
 
 namespace _2048
@@ -33,8 +34,10 @@ namespace _2048
 			List<TileUserControl> list = new List<TileUserControl>();
 			for(int i = 0; i < data.Length; i++)
 			{
-				TileUserControl con = new TileUserControl(skin);
-				con.Dock = DockStyle.Fill;
+				TileUserControl con = new TileUserControl(skin)
+				{
+					Dock = DockStyle.Fill
+				};
 				list.Add(con);
 			}
 			controls = list.ToArray();
