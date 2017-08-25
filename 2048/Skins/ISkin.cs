@@ -35,7 +35,8 @@ namespace _2048.Skins
 		MIACApp,
 		Cashflow,
 		Cat,
-		Bunny
+		Bunny,
+        Proposal
 	}
 
 	public static class SkinFactory
@@ -54,7 +55,9 @@ namespace _2048.Skins
 					return new CatSkin();
 				case SkinType.Cashflow:
 					return new CashFlowSkin();
-				default:
+                case SkinType.Proposal:
+                    return new ProposalSkin();
+                default:
 					throw new InvalidOperationException("Cannot find this type of skin");
 			}
 		}

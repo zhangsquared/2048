@@ -39,7 +39,7 @@ namespace _2048
 			InitSolver();
 			view.InitTiles(game.CurrentNumbers, InitSkin);
 		}
-		private ISkin InitSkin => SkinFactory.Generate(SkinType.Vanilla);
+		private ISkin InitSkin => SkinFactory.Generate(SkinType.Proposal);
 		private void InitBoard()
 		{
 			Board board = new Board(WIDTH);
